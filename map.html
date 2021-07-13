@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input, button {
+            padding: 7px;
+            height: 40px;
+        }
+        fieldset {
+            margin-bottom: 20px ;
+        }
+    </style>
+</head>
+
+<body> 
+    <!-- <h2 id="number">subscribe</h2>
+    <p>
+        X: <span id="x-value"></span>
+    </p>
+    <p>
+        X: <span id="y-value"></span>
+        
+    </p> -->
+     <!-- <fieldset>
+         <legend>Insert data</legend>
+         <input id="inpKey" type="text" placeholder="Enter key...">
+         <input id="inpVal " type="text" placeholder="Enter value...">
+         <button type="button" id="btnInsert">Insert data</button>
+     </fieldset>
+       <fieldset>
+           <legend>Local storage output</legend>
+           <div id="inOutPut"></div>
+       </fieldset> -->
+       
+    <!-- <ul id="myList">
+        <li>Apples</li>
+        <li id="pearsItem">Pears</li>
+        <li id="banana">Bananas</li>
+    </ul> -->
+    <h1 style="user-select:all">Lorem ipsum dolor sit amet consectetur.</h1>
+    <p>Lorem ipsum dolor sit.</p>
+    <input type="text"  id="myInp">
+    <button id="myB">Copy</button>
+    <script>
+        const myInput = document.getElementById('myInp')
+        const myButton = document.getElementById('myB')
+
+        myButton.onclick =  function() {
+            myInput.select();
+            document.execCommand("Copy")
+        }
+         //___________________
+        // let myObj = {
+        //     name: 'Kamola',
+        //     age: 22
+        // }
+        //  let myOjj = JSON.stringify(myObj)
+        //  localStorage.setItem("myObj", myOjj);
+          
+        //  let myDes = JSON.parse(localStorage.getItem("myObj"))
+        //  console.log(myDes);
+        
+        //______________________________________-
+        // var database = ['mers', 'audi'];
+        // for(let i = 0; i < database.length; i++) {
+        //     console.log(database[i]);
+        // }
+         
+        //______________________________________
+        //   const inpKey = document.getElementById('inpKey');
+        //   const inpVal = document.getElementById('inpValue');
+        //   const inpBtn = document.getElementById('btnInsert');
+        //   const isOutPut = document.getElementById('isOutPut');
+
+        //   inpBtn.onclick = function() {
+        //      const key = inpKey.value;
+        //     //  const value = inpVal.value;
+        //      console.log(key);
+        //     //  console.log(value);
+
+        //      if(key) { 
+        //        localStorage.setItem(key);
+        //        location.reload();
+        //    } 
+        //   }
+        //    for(let i = 0; i<localStorage.length; i++) {
+        //        const key =  localStorage.key(i);
+        //        const value = localStorage.getItem(key)
+
+        //        isOutPut.innerHTML += `${key}`;
+        //    }
+        //    for(let i =0; i<10; i++) {
+        //        console.log(i);
+        //    }
+           
+        //___________________________________________
+        // const box = document.querySelector("div.box");
+         
+        // window.addEventListener("scroll", function() {
+        //     if(box.getBoundingClientRect().top < window.innerHeight) {
+        //         box.style.background = 'red';
+        //     }
+        
+        //_________________________________________
+        // const applesItem = document.querySelector(" #myList > li: first - of - type ");
+        // const pearsItem = applesItem.nextElementSibling;
+        // console.log(pearsItem);
+        //  const nav = document.querySelector('nav');
+        //  const below = nav.nextElementSibling;
+          
+        //  below.style.marginTop = nav.clientHeight + "px";
+        
+        //_____________________________________________________
+        // const myList = document.getElementById('myList');
+        // const listChildren = myList.children;
+
+        // const pearsItem = listChildren[1];
+        // const pearsCopy = pearsItem.cloneNode(true);//deep clone//
+
+        // myList.appendChild(bananaCopy)
+        //___________________________________________________-
+    //     const myList =  document.getElementById('myList');
+    //     const pearItem = document.getElementById('pearsItem');
+    //     console.log(myList);
+    //     console.log(pearsItem);
+        
+    //     const orangesItem = document.createElement('li');
+    //     orangesItem.textContent = 'Oranges';
+    //     const apple = document.createElement('h1')
+    //     apple.textContent = 'Appless';
+        
+    //     // myList.insertBefore(orangesItem, pearsItem);
+    //     myList.insertBefore(apple, banana)
+        
+    //     function addToBeginning(parent, toInsert) {
+    //         const firstChild = parent.firstChild;
+    //         parent.insertBefore(toInsert, firstChild)
+    //     }
+    //    addToBeginning(myList, orangesItem);
+        //____________________________________________
+        // const data = new FormData();
+
+        // data.append("name", "Domenic");
+        // data.append("age", 56);
+
+        // const xhr =  new XMLHttpRequest();
+        // xhr.open("POST", "bottle.php", true);
+        // xhr.send(data)
+
+
+        //___________________________________________________
+        // const xhr = new XMLHttpRequest();
+        // xhr.onreadystatechange = function (){
+        //     if(xhr.readyState == 4) {
+        //         if(xhr.status == 200) {
+        //             document.getElementById('bottle').textContent = xhr.responseText
+        //         }
+        //         if (xhr.status == 404) {
+        //             console.log('file not found');
+        //         }
+        //     }
+        // } 
+        // xhr.open('get','dom.txt', true)
+        // xhr.send();
+        // const a2 = [22,33,44];
+        // const a4 = [2,3,...a2];
+        // console.log(a4);
+        // const a5 = [...a2,...a4];
+        // console.log(a5 );
+
+        // const a2 = [1,2,3];
+        // function sum (a,b,c) {
+        //     return a + b + c;
+        // }
+        // const result = sum.apply(null ,a2);// const result =  sum(...a2); 
+        // console.log(result);
+        //____________________________________________________________
+        // window.addEventListener('hashtag', function() {
+        //     console.log('hey, hash has been changed');
+        // })
+        //______________________________________________________________
+        // console.time('time');
+        // // alert('hey hey');
+        // console.timeEnd('time')
+        // console.log('Welcome %cKamola', `color: red; font-family: serif`);
+        //______________________________________________________________
+        // window.addEventListener('mousemove', function(e){
+        //     document.getElementById('x-value').textContent = e.x;
+        //     document.getElementById('y-value').textContent = e.y; 
+        // })
+        //___________________________
+        // let names = ['nick', 'sjs']
+        // console.log(names);
+        // // names.fill('kamola')
+        // names.fill ({
+        //     name: "Kamola",
+        //     profession: "web developer"
+        // });
+        // console.log(names);
+        // names[0].profession = "software developer";
+        // console.log(names );
+
+        ////_______________________________
+        // const numbers = [22,222,333,11,44,11]
+        // numbers.push(8)
+        // //   const newLengths = numbers.push(88)
+        //   console.log(numbers.length);
+        //   console.log(numbers);
+       
+        //_______________________-
+    //     const numbers = [1,2,3,4]
+    //    const one = numbers.shift();
+    //     console.log(numbers);
+    //     console.log(one);
+        // /_________________________--
+    
+        // const numb = [100, 102,202]
+        // function isOver (n) {
+        //     return n > 100;
+        // }
+        // console.log(numb.every(isOver));//some
+        // //////
+        // document.write (`
+        // <h1>Title</h1>
+        
+        // `)
+       
+        // ////
+        // const names = 'Kamola';
+        // console.log(`
+        // my name is ${names}
+        // how are u
+
+        // `);
+        ////////
+    //   const names = ['Dom', 'Bob', 'Mary'];
+    //   names.forEach(function(e, i){
+    //     //   console.log(e + " "+ i);
+    //     console.log(names.includes('Kamola'));  //if data exist
+    //   })
+         
+        // /////////////////////
+        //  const headerTag = document.getElementById('number')
+        //  headerTag.addEventListener('numberChanged', function(e) {
+        //      headerTag.textContent = e.detail.number;
+        //      headerTag.style.color = e.detail.textColor;
+        //  })
+        //  function changeNumber (n,c) {
+        //      const event = new CustomEvent('numberChanged', {
+        //          detail: {
+        //             number: n,
+        //             detail: c
+        //          }
+        //      })
+        //      headerTag.dispatchEvent(event)
+        // ///////////////////////
+        //  }
+        // let zoo = new Map();
+        // zoo.set('zebra', 8);
+        // zoo.set('Gorilla', 8);
+         
+        //  let zebraCount = zoo.get('zebra')
+        //  console.log(zebraCount);
+
+        //  for(let [key, value] of zoo) {
+        //     console.log(key + ':' + value);
+        //  }
+        // let numbers = [1,2,3,4];
+        // let [one,two,three,four] = numbers;
+        // console.log(one);
+        // console.log(two);
+        // console.log(three);
+        // console.log(four);
+        
+
+        
+    </script>
+</body>
+</html>

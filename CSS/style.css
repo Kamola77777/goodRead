@@ -1,0 +1,160 @@
+.part {
+    width: 900px;
+    height: 200px;
+    background-size: contain;
+}
+.part img {
+    width: 1350px;
+    height: 300px;
+
+}
+.main_t {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: absolute;
+    top: 400px;
+    left: 250px;
+}
+.img {
+    background-color: #F4F2E9
+}
+.img img {
+    margin: 20px 20px 20px 200px;
+}
+.pict {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* border: 1px solid; */
+    width: 600px;
+}
+.pic_item {
+   margin-left: 15px;
+}
+.center_text{
+   background-color: #F4F2E9;
+    width: 600px;
+    position: absolute;
+    top: 540px;
+    left: 239px;
+    border-radius: 10px;
+}
+.ww {
+    margin-top: 50px;
+}
+.texts {
+    margin-left: 10px;
+}
+.below_text {
+    position: absolute;
+    top: 1010px;
+    left: 239px;
+}
+.part_1 {
+    margin-left: -50px;
+    margin-right: 40px;
+}
+.part_1 li {
+    line-height: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+.mains {
+    display: flex;
+    flex-direction: row;
+}
+.part_2 {
+    margin-right: 40px;
+    line-height: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+.quota {
+    width: 200px;
+    margin-top: 50px;
+}
+.picts {
+    margin-right: 50px;
+    
+}
+.quotess {
+    display: flex;
+    flex-direction: row;
+    width: 800px;
+}
+.part_3 {
+    margin-top: 50px;
+    margin-left: 140px;
+}
+.qq {
+    position: absolute;
+    top: 540px;
+    left: 180px;
+}
+aside {
+    width: 300px;
+    height: 462px;
+    border: 1px solid;
+    position: absolute;
+    top: 100px;
+    right: 180px;
+    background-color: white;
+    border-radius: 10px;
+    border-color: rgba(179, 164, 202, 0.027);
+}
+.dis_item {
+    width: 250px;
+    height: 46px;
+    border: 1px solid;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+i {
+    font-size: 20px;
+}
+.icon_1 {
+    background-color: #3b5998;
+    border-color: #3b5998;
+    color: white;
+}
+.icon_2 {
+    background-color: #f5d47a;
+    border-color: #f5d47a ;
+}
+.icon_3 {
+    border-color: black;
+}
+.icon_4 {
+    background-color: #382110;
+    border-color: #382110 ;
+    color: white;
+    font-size: 18px;
+}
+.discover {
+    margin-left: 20px;
+}
+.below {
+    text-align: center;
+}
+.news {
+    position: absolute;
+    top: 500px;
+    right: 150px;
+}
+.dis_item a {
+ color: white;
+ text-decoration: none;
+}
+ul li a {
+    text-decoration: none;
+    list-style: none;
+}
+button a {
+    text-decoration: none;
+    font-size: 15px;
+    color: black;
+}

@@ -1,0 +1,12 @@
+#spinner {
+     display: none;
+     position: fixed;
+     top: 0px;
+     left: 0px;
+     right: 0px;
+     bottom: 0px;
+     width: 100%;
+     border-color: black;
+      background: rgb(211, 255, 205) url(./assets/spinner-loader-animation.gif) no-repeat center center;
+      z-index: 1000 ;
+}
