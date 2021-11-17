@@ -1,175 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="search.css">
     <title>Document</title>
-    <link rel="stylesheet" href="CSS/search.css">
 </head>
+<style>
+   body {
+       background-color: rgb(194, 219, 235);
+   }
+</style>
+
 <body>
-    <header>
-        <div class="container">
-            
-        <h1>Search and browse books</h1>
-        <div class="search-box">
-            <form action="" onsubmit="return false">
-                <input type="text" id="search" placeholder="Search...">
-                <button><a href="./sign_up.html">Sign up</a></button>
+    <div class="main-head">
+
+    </div>
+    <nav class="navbar navbar-expand-lg ">
+        <div class="container-fluid">
+            <img src="./assets/header_logo-8d96d7078a3d63f9f31d92282fd67cf4.png" height="45px" width="150px" style="object-fit: cover; margin-left: 40px;" alt="">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+           <span class="navbar-toggler-icon"></span>
+         </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" style="color: black; font-weight: 600;" aria-current="page" href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="/allbook.html" style="color: black; font-weight: 600;">All Books</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="/mybooks.html" style="color: black; font-weight: 600;">My Books</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" style="color: black; font-weight: 600;" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                 Browse
+               </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Recommendations</a></li>
+                            <li><a class="dropdown-item" href="#">Choice Awards</a></li>
+                            <li><a class="dropdown-item" href="#">Giveaways</a></li>
+                            <li><a class="dropdown-item" href="#">New Releases</a></li>
+                            <li><a class="dropdown-item" href="#">Lists</a></li>
+                            <li><a class="dropdown-item" href="#">Explore</a></li>
+                            <li><a class="dropdown-item" href="#">News & Interviews</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" style="color: black; font-weight: 600;" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                 Community
+               </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Groups</a></li>
+                            <li><a class="dropdown-item" href="#">Discussions</a></li>
+                            <li><a class="dropdown-item" href="#">Quotes</a></li>
+                            <li><a class="dropdown-item" href="#">Ask the Author</a></li>
+                            <li><a class="dropdown-item" href="#">Trivia</a></li>
+                            <li><a class="dropdown-item" href="#">Creative Writing</a></li>
+                            <li><a class="dropdown-item" href="#">People</a></li>
+                            <li><a class="dropdown-item" href="#">Events</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- <form id="form" class="d-flex">
+                    <input id="searchValue" class="form-control " style="width: 380px;" type="search" placeholder="Search" aria-label="Search">
+                    <button type="submit"></button>
+                </form> -->
+                <div class=" i-group d-flex">
+                    <div class="bell">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <div class="chatting">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <div>
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div>
+                        <i class="fas fa-users"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <nav class="navbar2 navbar-light bg-light">
+        <div class="container-fluid">
+            <form onsubmit="submitHandler(event)" class="d-flex">
+                <input id="input" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
             </form>
         </div>
-        <div class="filter-box">
-            <a href="#" class="btn" data-filter="all">All</a>
-            <a href="#" class="btn" data-filter="e-books">E-books</a>
-            <a href="#" class="btn" data-filter="fantasy">Fantasy</a>
-            <a href="#" class="btn" data-filter="graphic novel">Graphic novel</a>
-            <a href="#" class="btn" data-filter="science">Science</a>
-            <a href="#" class="btn" data-filter="history">History</a>
-        </div>
+
+    </nav>
+    <div id="list" class=" book row">
+
+
     </div>
-    </header>
-     <main>
-         <div class="slide-container">
-             <section class="container" id="store-products">
-               <div class="store-product e-books">
-                  <img src="./assets/55.jpg" alt="">
-                  <div class="product-details">
-                      <h2>Read books</h2>
-                      <p> <span>$39.00</span> $24.00</p>
-                      <a href="#">Add to card</a>
-                  </div>
-               </div>
-               <div class="store-product e-books">
-                  <img src="./assets/66.jpg" alt="">
-                  <div class="product-details">
-                      <h2>Read books</h2>
-                      <p> <span>$39.00</span> $24.00</p>
-                      <a href="#">Add to card</a>
-                  </div>
-               </div>
-               <div class="store-product e-books">
-                  <img src="./assets/10.jpg" alt="">
-                  <div class="product-details">
-                      <h2>Read books</h2>
-                      <p> <span>$39.00</span> $24.00</p>
-                      <a href="#">Add to card</a>
-                  </div>
-               </div>
-               <div class="store-product e-books">
-                  <img src="./assets/11.jpg" alt="">
-                  <div class="product-details">
-                      <h2>Read books</h2>
-                      <p> <span>$39.00</span> $24.00</p>
-                      <a href="#">Add to card</a>
-                  </div>
-               </div>
-               <div class="store-product fantasy">
-                  <img src="./assets/88.jpg" alt="">
-                  <div class="product-details">
-                      <h2>Read books</h2>
-                      <p> <span>$39.00</span> $24.00</p>
-                      <a href="#">Add to card</a>
-                  </div>
-               </div>
-               <div class="store-product fantasy">
-                  <img src="./assets/99.jpg" alt="">
-                  <div class="product-details">
-                      <h2>Read books</h2>
-                      <p> <span>$39.00</span> $24.00</p>
-                      <a href="#">Add to card</a>
-                  </div>
-               </div>
-               <div class="store-product fantasy">
-                  <img src="./assets/44.jpg" alt="">
-                  <div class="product-details">
-                      <h2>Read books</h2>
-                      <p> <span>$39.00</span> $24.00</p>
-                      <a href="#">Add to card</a>
-                  </div>
-               </div>
-               <div class="store-product graphic novel">
-                  <img src="./assets/55.jpg" alt="">
-                  <div class="product-details">
-                      <h2>Read books</h2>
-                      <p> <span>$39.00</span> $24.00</p>
-                      <a href="#">Add to card</a>
-                  </div>
-               </div>
-               <div class="store-product graphic novel">
-                  <img src="./assets/66.jpg" alt="">
-                  <div class="product-details">
-                      <h2>Read books</h2>
-                      <p> <span>$39.00</span> $24.00</p>
-                      <a href="#">Add to card</a>
-                  </div>
-               </div>
-               <div class="store-product graphic novel">
-                  <img src="./assets/77.jpg" alt="">
-                  <div class="product-details">
-                      <h2>Read books</h2>
-                      <p> <span>$39.00</span> $24.00</p>
-                      <a href="#">Add to card</a>
-                  </div>
-               </div>
-               <div class="store-product science">
-                  <img src="./assets/88.jpg" alt="">
-                  <div class="product-details">
-                      <h2>Read books</h2>
-                      <p> <span>$39.00</span> $24.00</p>
-                      <a href="#">Add to card</a>
-                  </div>
-               </div>
-               <div class="store-product science">
-                  <img src="./assets/99.jpg" alt="">
-                  <div class="product-details">
-                      <h2>Read books</h2>
-                      <p> <span>$39.00</span> $24.00</p>
-                      <a href="#">Add to card</a>
-                  </div>
-               </div>
-               <div class="store-product history">
-                  <img src="./assets/44.jpg" alt="">
-                  <div class="product-details">
-                      <h2>Read books</h2>
-                      <p> <span>$39.00</span> $24.00</p>
-                      <a href="#">Add to card</a>
-                  </div>
-               </div>
-               <div class="store-product history">
-                  <img src="./assets/11.jpg" alt="">
-                  <div class="product-details">
-                      <h2>Read books</h2>
-                      <p> <span>$39.00</span> $24.00</p>
-                      <a href="#">Add to card</a>
-                  </div>
-               </div>
-               <div class="store-product history">
-                  <img src="./assets/33.jpg" alt="">
-                  <div class="product-details">
-                      <h2>Read books</h2>
-                      <p> <span>$39.00</span> $24.00</p>
-                      <a href="#">Add to card</a>
-                  </div>
-               </div>
 
-             </section>
-         </div>
-     </main>
+    </div>
+    </div>
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-    <script src="./JS/search.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script>
+        function addToMyBooks(book) {
+            console.log("clicked adddto", book);
+            // const all = JSON.parse(localStorage.getItem("mybooks"));
+            // localStorage.setItem("mybooks", JSON.stringify([...all, book]));
+        }
+    </script>
+    <script src="./search.js"></script>
 </body>
+
 </html>

@@ -6,42 +6,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+    .progress-bar {
+      position: relative;
+      width: 300px;
+      height: 40px;
+      border: 1px solid #000;
+    }
+    .progress-bar-fill {
+        height: 100%;
+        background-color: #59ea63;
+        transition: width 0.5s;
+    }
+    .progress-bar-value {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+    }
+</style>
 <body>
-  <fieldset>
-      <legend>Insert Data</legend>
-      <input id="inpKey" type="text" name="" id="">
-      <input itemid="inpVal" type="text" name="" id="">
-      <button type="button" id="btn">Data</button>
-  </fieldset>
-  <fieldset>
-      <legend>localStorage</legend>
-      <div id="output"></div>
-  </fieldset>
+    <div class="progress-bar">
+        <div class="progress-bar-value">35</div>
+        <div class="progress-bar-fill"></div>
+       
+    </div>
 
 
-    <script>
-//   
-// localStorage.setItem("name", "Kamola");
-// localStorage.setItem("age", "22"); 
-// console.log(localStorage.key(2));
-// //////////////
- const inpK = document.getElementById('inpKey')
- const inpValue = document.getElementById('inpVal')
- const btns = document.getElementById('btn')
- const outP = document.getElementById('output')
 
- btns.onclick = function () {
-   const key = inpK.value;
-//    const values = inpValue.value;
-
-   console.log(key);
-//    console.log(values);
-if (key) {
-     localStorage(key);
-     location.reload( )
- }
- };
-
-    </script>
 </body>
+<script type="text/javascript">
+    class progressBar {
+        constructor (element, initialValue = 0) {
+            this.valueElem = element.querySelector('.progress-bar-value');
+            this.fillElem = element.querySelector('.progress-bar-fill');
+            
+            this.setValue(initialValue)
+
+            // console.log(this.valueElem);
+            // console.log(this.fillElem);
+        }
+        setValue (newValue) {
+            if (newValue < 0 ) {
+                newValue = 0;
+            }
+            if (newValue > 100) {
+                newValue = 100;
+            }
+            this.value = newValue;
+            this.update();
+        }
+        update () {
+           const percentage = this.value + '%';
+           this.fillElem.style.width = percentage;
+           this.valueElem.textContent = percentage;
+        }
+    }
+  new progressBar(document.querySelector('progress-bar'), 75);
+     </script>
 </html>

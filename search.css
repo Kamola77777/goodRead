@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: rgb(247, 237, 237);
+    margin: 0;
+    padding: 0;
+}
+.main-head {
+    margin: 0;
+    background: url(./41.jpg) no-repeat;
+    height: 60px;
+    width: 100%;
+}
+.navbar { 
+    background-color: #F4F1EA;
+    margin-top: -22px;
+    padding-right: 50px;
+}
+.i-group i{
+    margin-left: 45px;
+}
+.navbar2 {
+    margin-top: 20px;
+}
+.book {
+    margin: 40px 40px;
+}
+.books {
+   display: flex;
+   flex-direction: row;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    border: 1px solid rgb(146, 137, 137);
+    height: 190px;
+    width: 280px;
+}
+.imgg {
+    margin-top: 10px;
+    height: 160px;
+    width: 120px;
+}
+.main {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.main button {
+    font-size: 15px;
+    margin-top: 40px;
+    height: 35px;
+    width: 120px;
+}

@@ -105,7 +105,7 @@ document.getElementById('book-form').addEventListener('submit',function(e){
     ui.addBookToList(book);
  
     
-    ui.showAlert('Book Added', 'success');
+    ui.showAlert('Noticement Added', 'success');
     
     
     
@@ -127,7 +127,7 @@ document.getElementById('book-form').addEventListener('submit',function(e){
     
    
     alert('Are you sure to delete')
-    ui.showAlert('Book Removed!', 'success');
+    ui.showAlert('List Removed!', 'success');
     
     
     e.preventDefault();

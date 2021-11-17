@@ -1,3 +1,21 @@
+ body {
+     background-color: wheat;
+ }
+#form{
+    width: 600px;
+    border: 1px solid;
+    height: 500px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: turquoise;
+}
+.form__inp {
+    width: 500px;
+    height: 40px;
+    margin: 4px;
+    border-radius: 10px;
+    border-color: rgb(127, 255, 127);
+}
 .left {
     width: 200px;
     height: 600px;
@@ -58,57 +76,21 @@ li {
   .icons:hover {
     background-color: rgb(76, 0, 255);
   }
-  /* * {
-    margin: 0;
-    padding: 0;
-}
-body {
-    background: rgb(247, 237, 237);
-    margin: 0;
-    padding: 0;
-}
-.main-head {
-    margin: 0;
-    background: url(./41.jpg) no-repeat;
-    height: 60px;
-    width: 100%;
-}
-.navbar { 
-    background-color: #F4F1EA;
-    margin-top: -22px;
-    padding-right: 50px;
-} */
-.i-group i{
-    margin-left: 45px;
-}
-.navbar2 {
-    margin-top: 20px;
-}
-.book {
-    margin: 40px 40px;
-}
-.books {
-   display: flex;
-   flex-direction: row;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    margin-right: 20px;
-    border: 1px solid rgb(146, 137, 137);
-    height: 190px;
-    width: 280px;
-}
-.imgg {
-    margin-top: 10px;
-    height: 160px;
-    width: 120px;
-}
-.main {
-    margin-top: 10px;
-    margin-left: 10px;
-}
-.main button {
-    font-size: 15px;
-    margin-top: 40px;
-    height: 35px;
-    width: 120px;
-}
+  #form__btn {
+      width: 100px;
+      height: 35px;
+      border-radius: 25px;
+      background-color: blueviolet;
+      border-color: blueviolet;
+      color: white;
+      margin-top: 5px;
+  }
+  #form__btn:hover {
+      background-color: yellowgreen;
+      border-color: yellowgreen;
+  }
+  .form__btns a {
+    list-style: none;
+    color: white;
+
+  }

@@ -1,4 +1,4 @@
-.part {
+/* .part {
     width: 900px;
     height: 200px;
     background-size: contain;
@@ -27,7 +27,7 @@
     flex-direction: row;
     justify-content: center;
     /* border: 1px solid; */
-    width: 600px;
+    /* width: 600px;
 }
 .pic_item {
    margin-left: 15px;
@@ -157,4 +157,134 @@ button a {
     text-decoration: none;
     font-size: 15px;
     color: black;
+} */ */
+/* _______________________________________________________________ */
+.text {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 40;
+    position: absolute;
+    top: 400px;
+    left: 250px;
 }
+  .text {
+    display: flex;
+    margin-left: 170px;
+  }
+    .text_item {
+    margin-left: 20px;
+    width: 280px;
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .discover {
+      width: 625px;
+      height: 435px;
+      margin-left: 170px;
+      border: 1px solid none;
+      background-color: #f4f2e9;
+      text-align: center;
+      border-radius: 10px;
+      
+  }
+  .social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 250px;
+    height: 50px;
+    border: 1px solid #d8d8d8;
+    border-radius: 4px;
+    margin-bottom: 15px;
+  }
+  #container {
+    width: 100%;
+    height: 290px;
+    display: flex;
+    position: absolute;
+    top: 100px;
+  }
+   #container .img-con img {
+    height: 285px;
+    width: 100%;
+    object-fit: cover;
+  }
+   #container #form {
+    z-index: 1;
+    padding: 30px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    bottom: -145px;
+    background: white;
+    position: absolute;
+    right: 180px;
+    width: 300px;
+    height: 490px;
+    border: 1px solid #d8d8d8;
+  }
+   #container #form a {
+    color: #427472;
+    text-decoration: none;
+  }
+   #container #form i {
+    font-size: 25px;
+    margin-right: 10px;
+  }
+   #container #form h2 {
+    margin-bottom: 30px;
+    font-size: 20px;
+    font-family: serif;
+    color: #427472;
+  }
+   #container #form h3 {
+    margin-top: 20px;
+    color: #545754;
+    font-size: 17px;
+    font-weight: 500;
+  }
+   #container #form #facebook {
+    background: #3b5998;
+    color: white;
+  }
+   #container #form #amazon {
+    background: #f5d47a;
+  }
+   #container #form #email {
+    background: #382110;
+    color: white;
+  }
+   #container #form .privacy {
+    font-size: 12px;
+    width: 250px;
+    border-bottom: 1px solid #d8d8d8;
+    padding-bottom: 20px;
+  }
+  /* __________Loader_________ */
+  .loader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: white;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .disappear {
+      animation: vanish 10s forwards;
+  }
+  @keyframes vanish {
+      100%{
+          opacity: 0;
+          visibility: hidden;
+      }
+  }

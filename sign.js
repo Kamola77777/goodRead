@@ -13,16 +13,20 @@ function signUp(event) {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(users),
   };
-  fetch("http://book.alitechbot.uz/api/sign-up", requestOption)
+  fetch("https://book.alitechbot.uz/api/sign-up", requestOption)
     .then((data) => data.json())
     .then((data) => {
       console.log(data);
+      localStorage.token = data.token
       if (data.success) {
-        alert("Ruyhatdan utdiz");
-        window.location.pathname = "search.html";
+        alert("You have been registered");
+        window.location.pathname = "addBook.html";
       } else {
-        alert("Qayta uring");
+        alert("Try again");
       }
     })
-    .catch((msg) => console.log(msg, "xatolik"));
+    .catch((msg) => console.log(msg, "Error"));
+}
+function myFunction() {
+  window.history.back();
 }

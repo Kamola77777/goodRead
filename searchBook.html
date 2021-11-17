@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="./search.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="main-head">
+
+    </div>
+    <nav class="navbar navbar-expand-lg ">
+        <div class="container-fluid">
+            <img src="./photo_2021-06-11_21-00-00.jpg" height="45px" width="150px" style="object-fit: cover; margin-left: 40px;" alt="">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+           <span class="navbar-toggler-icon"></span>
+         </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" style="color: black; font-weight: 600;" aria-current="page" href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="/allbook.html" style="color: black; font-weight: 600;">All Books</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="/mybooks.html" style="color: black; font-weight: 600;">My Books</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" style="color: black; font-weight: 600;" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                 Browse
+               </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Recommendations</a></li>
+                            <li><a class="dropdown-item" href="#">Choice Awards</a></li>
+                            <li><a class="dropdown-item" href="#">Giveaways</a></li>
+                            <li><a class="dropdown-item" href="#">New Releases</a></li>
+                            <li><a class="dropdown-item" href="#">Lists</a></li>
+                            <li><a class="dropdown-item" href="#">Explore</a></li>
+                            <li><a class="dropdown-item" href="#">News & Interviews</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" style="color: black; font-weight: 600;" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                 Community
+               </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Groups</a></li>
+                            <li><a class="dropdown-item" href="#">Discussions</a></li>
+                            <li><a class="dropdown-item" href="#">Quotes</a></li>
+                            <li><a class="dropdown-item" href="#">Ask the Author</a></li>
+                            <li><a class="dropdown-item" href="#">Trivia</a></li>
+                            <li><a class="dropdown-item" href="#">Creative Writing</a></li>
+                            <li><a class="dropdown-item" href="#">People</a></li>
+                            <li><a class="dropdown-item" href="#">Events</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- <form id="form" class="d-flex">
+                    <input id="searchValue" class="form-control " style="width: 380px;" type="search" placeholder="Search" aria-label="Search">
+                    <button type="submit"></button>
+                </form> -->
+                <div class=" i-group d-flex">
+                    <div class="bell">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <div class="chatting">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <div>
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div>
+                        <i class="fas fa-users"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+      <!-- <h2 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; margin-left: 50px;">Friends</h2>
+      <hr>
+      <h3 style="margin-left: 50px;">You have no friends <em>yet</em><a href="https://www.goodreads.com/friend/invite" style="text-decoratione: none"><span style="color: rgb(90, 172, 8);"> Add some</span></a> </h3> -->
+     
+      <div class="container-fluid">
+        <form onsubmit="submitHandler(event)" class="d-flex">
+            <input id="input" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+    </div>
+
+</nav>
+        <div class="container-fluid">
+            <form onsubmit="submitHandler(event)" class="d-flex">
+                <input id="input" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
+
+    </nav>
+    <div id="list" class=" book row">
+
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script>
+        function addToMyBooks(book) {
+            console.log("clicked adddto", book);
+            // const all = JSON.parse(localStorage.getItem("mybooks"));
+            // localStorage.setItem("mybooks", JSON.stringify([...all, book]));
+        }
+    </script>
+    <script src="./searchBook.js"></script>
+</body>
+
+</html>
